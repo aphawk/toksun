@@ -1,0 +1,35 @@
+#-*- mode: org -*-
+#+STARTUP: overview
+
+
+* TODO request validation code
+#+BEGIN_SRC clojure
+(defn post-page [{:keys [url timeout params connection-manager]  :or
+                  {:connection-manager default-connection-manager
+                   :timeout 5000}
+                  :as params}]
+  (http/post url
+             {:insecure true
+              :socket-timeout timeout
+              :conn-timeout timeout
+              :max-redirects 5
+              :form-params params
+              :throw-exceptions false
+              :connection-manager connection-manager
+              :headers {"User-Agent" "BearyChat-fluffy"}
+              }))
+#+END_SRC
+* TODO validate code
+* create team and user 
+#+BEGIN_SRC clojure
+(println "awemose")
+#+END_SRC
+* signup , regular
+* signup with a enterprise email
+* signup from given link which does not require administration
+* signup from email invited , could be a visitor
+* send email invitation
+* send mobile invitation
+
+* TODO login
+* TODO signin
