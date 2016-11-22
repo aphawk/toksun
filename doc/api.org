@@ -1,6 +1,4 @@
-#-*- mode: org -*-
 #+STARTUP: overview
-
 
 * TODO request validation code
 #+BEGIN_SRC clojure
